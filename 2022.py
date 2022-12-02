@@ -26,7 +26,7 @@ class Position:
         self.coord = (self.getX() + horizontal_direction(self.angle) * steps, self.getY() + vertical_direction(self.angle) * steps)
 
     def turn(self, deg):
-        self.angle = self.angle + deg
+        self.angle = self.angle - deg
 
     def move(self, moves):
         for m in moves:
@@ -64,7 +64,7 @@ def draw_tracks(lines):
     turtle.exitonclick()
 
 def main():
-    pos = Position((0,0), -90, [])
+    pos = Position((0,0), 90, [])
     moves = parse_input("input01")
     pos.move(moves)
     result = manhattan(Position((0,0), 90, []), pos)
