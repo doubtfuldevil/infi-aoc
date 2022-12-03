@@ -65,7 +65,7 @@ def draw_tracks(lines):
 
 def main():
     pos = Position((0,0), 90, [])
-    moves = parse_input("input01")
+    moves = parse_input("input/2022_input_02")
     pos.move(moves)
     result = manhattan(Position((0,0), 90, []), pos)
     print(f"Manhattan distance: {result}")
